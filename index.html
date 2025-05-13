@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simotop - Documentazione Tecnica</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 2em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 100%;
+      max-width: 420px;
+      border-top: 10px solid #e87722; /* arancione aziendale */
+    }
+    img {
+      max-width: 140px;
+      margin-bottom: 1em;
+    }
+    h1 {
+      color: #0b3c49; /* verde petrolio */
+      margin-bottom: 0.5em;
+    }
+    p {
+      color: #333;
+    }
+    select {
+      padding: 10px;
+      width: 100%;
+      font-size: 16px;
+      margin-top: 1em;
+      border: 2px solid #e87722;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="LogoSimotop.png" alt="Logo Simotop" />
+    <h1>Legenda Documenti</h1>
+    <p>Seleziona il tipo di file che desideri consultare:</p>
+    <select onchange="if(this.value) window.open(this.value, '_blank')">
+      <option value="">-- Scegli un documento --</option>
+      <option value="https://simotop-my.sharepoint.com/:f:/g/personal/tecnico_simotopgroup_com/EqYriIFSp8tApzG-uSH-ymwBCZhww2jWhDTj71iROmJwVw?e=JVOq7u">CERTIFICATES</option>
+      <option value="https://simotop-my.sharepoint.com/:f:/g/personal/tecnico_simotopgroup_com/ElaplAOJ14xAtAU1qnP8UfEBxGP0V1i0Bf_6d-HUP7HF8g?e=0b4bdI">MANUALS</option>
+      <option value="https://simotop-my.sharepoint.com/:f:/g/personal/tecnico_simotopgroup_com/EslpWu_kX2BEsKPSKiYBUMEBcKmvfBXXR5Bz9kX9N8qhpQ?e=8E3cku">WIRING DIAGRAMS</option>
+    </select>
+  </div>
+</body>
+</html>
