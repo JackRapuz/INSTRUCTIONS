@@ -24,14 +24,14 @@
       text-align: center;
       width: 100%;
       max-width: 420px;
-      border-top: 10px solid #e87722; /* arancione aziendale */
+      border-top: 10px solid #e87722;
     }
     img {
       max-width: 140px;
       margin-bottom: 1em;
     }
     h1 {
-      color: #0b3c49; /* verde petrolio */
+      color: #0b3c49;
       margin-bottom: 0.5em;
     }
     p {
@@ -51,13 +51,39 @@
   <div class="container">
     <img src="LogoSimotop.png" alt="Logo Simotop" />
     <h1>Legenda Documenti</h1>
-    <p>Seleziona il tipo di file che desideri consultare:</p>
+    <p>Seleziona il documento che desideri consultare:</p>
     <select onchange="if(this.value) window.open(this.value, '_blank')">
-      <option value="">-- Scegli un documento --</option>
-      <option value="https://simotop-my.sharepoint.com/:f:/g/personal/tecnico_simotopgroup_com/EqYriIFSp8tApzG-uSH-ymwBCZhww2jWhDTj71iROmJwVw?e=JVOq7u">CERTIFICATES</option>
-      <option value="https://simotop-my.sharepoint.com/:f:/g/personal/tecnico_simotopgroup_com/ElaplAOJ14xAtAU1qnP8UfEBxGP0V1i0Bf_6d-HUP7HF8g?e=0b4bdI">MANUALS</option>
-      <option value="https://simotop-my.sharepoint.com/:f:/g/personal/tecnico_simotopgroup_com/EslpWu_kX2BEsKPSKiYBUMEBcKmvfBXXR5Bz9kX9N8qhpQ?e=8E3cku">WIRING DIAGRAMS</option>
-    </select>
+  <option value="">-- Seleziona un documento --</option>
+  <optgroup label="CERTIFICATES - ATEX">
+    <option value="https://simotop-my.sharepoint.com/:b:/g/personal/tecnico_simotopgroup_com/ETVsrQnfrHVKgZQeGY6-dygBlF0INgw2kX1tQ3dTo1nj4w?e=hOzAcA">ATEX CERTIFICATE</option>
+    <option value="https://simotop-my.sharepoint.com/:b:/g/personal/tecnico_simotopgroup_com/ER4NaPVx6ClCkKgR0eBrFyMBrQn_G9EeB5rzt4iR7RWBxA?e=Cge0FC">CLASS I e II - DIV. II</option>
+    <option value="https://simotop-my.sharepoint.com/:b:/g/personal/tecnico_simotopgroup_com/Ec7YRvAFzyNPm-yHv0aMl3cBzgA_yL3c6KHLwbKztpar_A?e=2hPDWg">CE CONFORMITY</option>
+  </optgroup>
+  <optgroup label="CERTIFICATES - CE">
+    <option value="https://simotop-my.sharepoint.com/:b:/g/personal/tecnico_simotopgroup_com/EZuaH3A2EmNNgZYe6ud2o98Bwvl0W6mONnJbG07oxyQBvg?e=yLwmww">CE CONFORMITY ITA</option>
+    <option value="https://simotop-my.sharepoint.com/:b:/g/personal/tecnico_simotopgroup_com/EYaG73a1nA9KmxvYUhNpjHAB2Sd-h7Xa9Bw06ToFL6HsKA?e=cedQ6F">CE CONFORMITY ENG</option>
+  </optgroup>
+  <optgroup label="CERTIFICATES - UL/CSA">
+    <option value="https://simotop-my.sharepoint.com/:b:/g/personal/tecnico_simotopgroup_com/ER0B8_53qCdFmXFLJFHdMg0B4QuXjQC_xiLSl_geqZ1wTw?e=3OAVTv">CERTIFICATE KW</option>
+    <option value="https://simotop-my.sharepoint.com/:b:/g/personal/tecnico_simotopgroup_com/EVPcHFIOYB9Fo-chiWPMxUoBGxVkKXdjfs9c98x6bi21og?e=dQpdwx">CERTIFICATE SINGLE PHASE</option>
+    <option value="https://simotop-my.sharepoint.com/:b:/g/personal/tecnico_simotopgroup_com/EWdtw5lPWYxFuZ6EiiDX-gABWrOE3ezQOiljzcvO6pQGYw?e=CfC0gh">CERTIFICATE THREE PHASE</option>
+  </optgroup>
+  <optgroup label="MANUALS - BRAKE INSTRUCTIONS">
+    <option value="https://simotop-my.sharepoint.com/:b:/g/personal/tecnico_simotopgroup_com/EV4Y7WOF8GZKkxi2wMMjkvEBbT9BoBlQuKj1R66vLXx4qg?e=Tgtaqg">CONNECTION INSTRUCTIONS</option>
+  </optgroup>
+  <optgroup label="MANUALS - USE AND MAINTENANCE">
+    <option value="https://simotop-my.sharepoint.com/:b:/g/personal/tecnico_simotopgroup_com/EWDwCBirP1JAnY20EarpKpoBj-IKYV5xrnBkgFMZKE1n5A?e=2VTzHV">ITALIANO</option>
+    <option value="https://simotop-my.sharepoint.com/:b:/g/personal/tecnico_simotopgroup_com/EWDwCBirP1JAnY20EarpKpoBj-IKYV5xrnBkgFMZKE1n5A?e=2VTzHV">ENGLISH</option>
+    <option value="https://simotop-my.sharepoint.com/:b:/g/personal/tecnico_simotopgroup_com/EeGgXOpl5r1KmP1HwSG3ac4B4AcxURKJHVLar2USAFgk5Q?e=Chc9on">FRANCOIS</option>
+    <option value="https://simotop-my.sharepoint.com/:b:/g/personal/tecnico_simotopgroup_com/EYf6ytTteTFEm7Tv-05OHi4BYPVPOWGSXsBwDB37Uv6nqA?e=va06xx">DEUTCH</option>
+  </optgroup>
+  <optgroup label="WIRING DIAGRAMS">
+    <option value="https://simotop-my.sharepoint.com/:b:/g/personal/tecnico_simotopgroup_com/EVhM-5A2pAxKvi5Mobwo64cB9PoUxUqKgh0Cp3KN_YwVSg?e=UX1Pys">3PHASE MOTOR</option>
+    <option value="https://simotop-my.sharepoint.com/:b:/g/personal/tecnico_simotopgroup_com/EUbMs386GPFLr2q_gHWE3IMBMyvzN5y0RRKU9H_Cf02x0g?e=1e5wq8">BRAKE</option>
+    <option value="https://simotop-my.sharepoint.com/:b:/g/personal/tecnico_simotopgroup_com/EWJM2ofRRaBIj-bm1u-WNnEBA6xGwxq9QtcJ9-H5l50chQ?e=OiNJSC">3PH FORCED COOLING</option>
+    <option value="https://simotop-my.sharepoint.com/:b:/g/personal/tecnico_simotopgroup_com/EelKVNYpJRpNnIXuZ5OZXl8BPyahYxqqNL9VTlcPWzCLXg?e=iqkeZW">1PHASE MOTOR</option>
+  </optgroup>
+</select>
   </div>
 </body>
 </html>
