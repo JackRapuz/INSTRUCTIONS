@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simotop - Documentazione Tecnica</title>
   <style>
     body {
@@ -45,14 +45,27 @@
       border: 2px solid #e87722;
       border-radius: 5px;
     }
+    button {
+      margin-top: 1em;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #0b3c49;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0a3240;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="LogoSimotop.png" alt="Logo Simotop" />
+    <img src="LogoSimotop.png" alt="Logo Simotop">
     <h1>Legenda Documenti</h1>
-    <p>Seleziona il documento che desideri consultare:</p>
-    <select onchange="if(this.value) window.open(this.value, '_blank')">
+    <p>Seleziona il documento e clicca su "Apri documento":</p>
+    <select id="fileSelector">
   <option value="">-- Seleziona un documento --</option>
   <optgroup label="CERTIFICATES - ATEX">
     <option value="documents/CERTIFICATE_ATEX.pdf">CERTIFICATE_ATEX.pdf</option>
@@ -81,6 +94,19 @@
     <option value="documents/Collegamento%20servoventilazione%20(3phforced%20cooling)%20TRIFASE%20Techtop.pdf">Collegamento servoventilazione (3phforced cooling) TRIFASE Techtop.pdf</option>
   </optgroup>
 </select>
+    <button onclick="openSelected()">Apri documento</button>
   </div>
+
+  <script>
+    function openSelected() {
+      var selector = document.getElementById('fileSelector');
+      var selectedValue = selector.value;
+      if (selectedValue) {
+        window.open(selectedValue, '_blank');
+      } else {
+        alert("Seleziona un documento dal menu.");
+      }
+    }
+  </script>
 </body>
 </html>
